@@ -7,10 +7,7 @@ class Solution {
         {
             int temp=prices[i]-low;
             profit=Math.max(profit,temp);
-            if(prices[i]<low)
-            {
-                low=prices[i];
-            }
+           low=Math.min(low,prices[i]);
         }
         return profit;
     }
